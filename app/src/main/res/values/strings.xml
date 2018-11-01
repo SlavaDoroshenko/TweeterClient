@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Ef</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="following_hint">Following</string>
+    <string name="followers_hint">Followers</string>
+    <string name="fa_map_marker">\uf041</string>
+    <string name="fa_retweet">\uf079</string>
+    <string name="fa_like">\uf004</string>
+</resources>

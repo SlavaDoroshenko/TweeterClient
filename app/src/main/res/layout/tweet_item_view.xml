@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/top_margin"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        style="@style/TextView.Primary.Bold"
+        android:id="@+id/author_name_text_view"
+        android:layout_toEndOf="@id/profile_image_view"
+        android:text="Slava"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        android:id="@+id/author_nick_text_view"
+        style="@style/TextView.Secondary"
+        android:layout_marginStart="@dimen/top_margin"
+        android:layout_toEndOf="@id/author_name_text_view"
+        android:text="slava"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        android:id="@+id/creation_data_text_view"
+        style="@style/TextView.Secondary"
+        android:layout_marginStart="@dimen/top_margin"
+        android:layout_toEndOf="@id/author_nick_text_view"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="окт. 27"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        android:id="@+id/tweet_content_text_view"
+        style="@style/TextView.Primary"
+        android:layout_below="@+id/author_name_text_view"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@id/profile_image_view"
+        android:text="rererewrerererewrerererererererererererererererere"
+        tools:ignore="RtlCompat"/>
+
+    <ImageView
+        android:id="@+id/tweet_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tweet_content_text_view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_toEndOf="@+id/profile_image_view"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="RtlCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tweet_image_view"
+        android:layout_toEndOf="@+id/profile_image_view"
+        android:orientation="horizontal"
+        tools:ignore="RtlCompat">
+
+        <LinearLayout
+            android:id="@+id/like_container"
+            style="@style/HalfWidth"
+            android:orientation="horizontal"
+            tools:ignore="Suspicious0dp">
+
+            <TextView
+                style="@style/TextIcon.Secondary"
+                android:text="@string/fa_like"/>
+
+            <TextView
+                android:id="@+id/like_text_view"
+                style="@style/TextView.Secondary"
+                android:text="16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/retweet_container"
+            style="@style/HalfWidth"
+            android:orientation="horizontal"
+            tools:ignore="Suspicious0dp">
+
+            <TextView
+                style="@style/TextIcon.Secondary"
+                android:text="@string/fa_retweet"/>
+
+            <TextView
+                android:id="@+id/retweet_text_view"
+                style="@style/TextView.Secondary"
+                android:text="12"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
