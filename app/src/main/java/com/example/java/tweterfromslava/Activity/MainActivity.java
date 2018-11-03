@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private User getUser() {
-        return new User(5454,"https://sun7-1.userapi.com/c635103/v635103498/3e94b/BdSvb8I_nKQ.jpg",
+        return new User(5454L,"https://sun7-1.userapi.com/c635103/v635103498/3e94b/BdSvb8I_nKQ.jpg",
                 "Slava Doroshenko", "@slavaDoroshenko", "Лучший маленький кодер сея Саратова", "Russia, Saratov", 42, 42);
     }
 }

@@ -1,7 +1,7 @@
 package com.example.java.tweterfromslava.POJO;
 
 public class User {
-    private long id;
+    private Long id;
     private String imageUrl;
     private String name;
     private String nick;
@@ -10,7 +10,7 @@ public class User {
     private int followingCount;
     private int followerCount;
 
-    public User(long id, String imageUrl, String name, String nick, String description, String location, int followingCount, int followerCount) {
+    public User(Long id, String imageUrl, String name, String nick, String description, String location, int followingCount, int followerCount) {
         this.id = id;
         this.imageUrl = imageUrl;
         this.name = name;
@@ -60,26 +60,24 @@ public class User {
 
         User user = (User) o;
 
-        if (id != user.id) return false;
         if (followingCount != user.followingCount) return false;
         if (followerCount != user.followerCount) return false;
-        if (imageUrl != null ? !imageUrl.equals(user.imageUrl) : user.imageUrl != null)
-            return false;
+        if (!id.equals(user.id)) return false;
+        if (!imageUrl.equals(user.imageUrl)) return false;
         if (!name.equals(user.name)) return false;
         if (!nick.equals(user.nick)) return false;
-        if (description != null ? !description.equals(user.description) : user.description != null)
-            return false;
-        return location != null ? location.equals(user.location) : user.location == null;
+        if (!description.equals(user.description)) return false;
+        return location.equals(user.location);
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (imageUrl != null ? imageUrl.hashCode() : 0);
+        int result = id.hashCode();
+        result = 31 * result + imageUrl.hashCode();
         result = 31 * result + name.hashCode();
         result = 31 * result + nick.hashCode();
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (location != null ? location.hashCode() : 0);
+        result = 31 * result + description.hashCode();
+        result = 31 * result + location.hashCode();
         result = 31 * result + followingCount;
         result = 31 * result + followerCount;
         return result;
