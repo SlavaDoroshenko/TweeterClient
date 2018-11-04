@@ -11,6 +11,7 @@
         android:id="@+id/user_image_view"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_marginTop="@dimen/top_margin"
         android:src="@mipmap/ic_launcher"
         tools:ignore="RtlCompat" />
 
@@ -19,7 +20,8 @@
         android:layout_marginStart="@dimen/top_margin"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="RtlCompat">
+        tools:ignore="RtlCompat"
+        android:layout_marginTop="@dimen/top_margin">
 
         <TextView
             style="@style/TextView.Primary.Bold"
