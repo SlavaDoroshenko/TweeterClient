@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
->
+    android:layout_margin="3dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_image_view"
@@ -26,10 +26,12 @@
         <TextView
             style="@style/TextView.Primary.Bold"
             android:id="@+id/usr_name_text_view"
+            android:layout_alignBaseline="@id/user_image_view"
             android:text="Slava" />
 
         <TextView
             android:id="@+id/usr_nick_text_view"
+            android:layout_alignBaseline="@id/user_image_view"
             style="@style/TextView.Secondary"
             android:text="slava"/>
 
